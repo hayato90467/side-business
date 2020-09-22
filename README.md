@@ -8,22 +8,25 @@
 | email         | string | null: false |
 | password      | string | null: false |
 
-### Association
+##c# Association
 
-- has_many :comment
-- has_many :rooms, through: room_users
-- has_many :messages
+- has_many :comments
 
 ## comments テーブル
 
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| name   | string | null: false |
+| Column                  | Type    | Options     |
+| ------                  | ------  | ----------- |
+| user_id                 | integer  | null: false ,foreign_key|
+| business_name           | string  | null: false |
+| explanation             | text    | null: false |
+| image                   | integer | null: false |
+
+
+
 
 ### Association
 
-- has_many :room_users
-- has_many :users, through: room_users
+- belongs_to :user
 - has_many :messages
 
 ## room_users テーブル
