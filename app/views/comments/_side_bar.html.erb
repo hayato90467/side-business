@@ -1,13 +1,13 @@
 <div class="side-bar-header">
-<div class="header-name">
-    <a href="#">Tom</a>
-  </div>
-  <div class="create-room">
-    <a href="#">チャットを作成する</a>
-  </div>
+ <div class="header-title">
+      side
+    </div>
 </div>
 
 <div class="rooms">
+<div class="header-name">
+    <a href=<%= link_to current_user.name , edit_user_path(current_user) %></a>
+  </div>
 <div class="room">
     <div class="room-name">
       <a href="#">techroom1</a>
@@ -17,5 +17,11 @@
     <div class="room-name">
       <a href="#">techroom2</a>
     </div>
+    <%# <div class="create-room">
+    <a href="#">チャットを作成する</a>
+  </div> %>
+  <%# <div class="header-button">
+      <a href="#">チャットを終了する</a>
+    </div> %>
   </div>
 </div>
