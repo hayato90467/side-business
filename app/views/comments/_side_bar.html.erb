@@ -12,9 +12,10 @@
      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
    </div>
  <div class="room">
-    <%# <div class="room-name">
-      <a href="#">techroom1</a>
-    </div> %>
+     <div class="room-name">
+      <%# <div  class=皆で投稿しよう</a> %>
+      <%= link_to "新規投稿", new_comment_path, class: 'btn'%>
+    </div> 
   </div>
   <div class="room">
     <%# <div class="room-name">
