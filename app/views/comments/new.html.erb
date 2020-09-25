@@ -1,0 +1,33 @@
+<h1>コメント<h2>
+
+<%= form_with model: @comment, html: {class: "form"}, local: true do |f| %>
+   
+    <%# 副業と副業説明 %>
+    <div class="commet-items">
+      <div class="weight-bold-text">
+        副業紹介
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :business_name, class:"comment-text", id: "business_name", placeholder:"副業名（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          副業の説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :explanation, class:"comment-text", id: "explanation", placeholder:"副業の説明（必須 1,000文字まで。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+      <div class="img-upload">
+      <div class="weight-bold-text">
+        出品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"image" %>
+      </div>
+       <%= f.submit '送信', class: 'form-submit' %>
+       </div>
+<% end %>
+    
