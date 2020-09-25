@@ -55,3 +55,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "bulma-rails"
 gem 'pry-rails'
 gem 'devise'
+gem "aws-sdk-s3", require: false
