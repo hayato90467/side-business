@@ -6,10 +6,6 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 17a57b05ad77175e1d79517e08ea01fa47edc8b6
 amazon:
   service: S3
   access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>

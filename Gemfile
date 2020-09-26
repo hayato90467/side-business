@@ -55,10 +55,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "bulma-rails"
 gem 'pry-rails'
 gem 'devise'
-<<<<<<< HEAD
 gem "aws-sdk-s3", require: false
-=======
-gem 'mini_magick'
-gem 'image_processing', '~> 1.2'
-gem "aws-sdk-s3", require: false
->>>>>>> 17a57b05ad77175e1d79517e08ea01fa47edc8b6
