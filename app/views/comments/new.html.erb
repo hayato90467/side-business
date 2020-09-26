@@ -1,6 +1,7 @@
 <h1>コメント<h2>
 
 <%= form_with model: @comment, html: {class: "form"}, local: true do |f| %>
+<%# <%= render 'shared/error_messages', model: @comment %> 
    
     <%# 副業と副業説明 %>
     <div class="commet-items">

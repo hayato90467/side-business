@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
 
   def index
+    @comments = Comment.order('created_at DESC')
   end
 
   def new
@@ -13,8 +14,12 @@ class CommentsController < ApplicationController
       redirect_to root_path
     else
       render :new
-      
     end
+  end
+
+  def show
+    
+
   end
 
 

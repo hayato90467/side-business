@@ -62,12 +62,12 @@
   color: white;
 }
 
-.chat {
+/* .chat {
   background-color: #ffffff;
   width: calc(100% );
-}
+} */
 
-.chat-header {
+/* .chat-header {
   height: 100px;
   padding: 0 40px;
   display: flex;
@@ -185,4 +185,4 @@
   height: 50px;
   margin-left: 15px;
   padding: 0 20px;
-}
+} */
