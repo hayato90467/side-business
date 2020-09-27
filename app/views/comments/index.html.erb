@@ -5,14 +5,12 @@
 
  <div class="chat">
   <div class='comment-contents'>
-     <h2 class='title'></h2>
-     <%= link_to '投稿一覧', "new_item_path", class: "subtitle" %> 
+     <h2 class='title'>投稿一覧</h2> 
 
       <ul class='item-lists'>
         <% @comments.each do |comment| %>
-        <%= link_to comment_path(comment.id) do  %> 
         <li class='list'>
-        <%= image_tag comment.image, class: "item-image" if comment.image.attached? %>
+         <%= link_to comment_path(comment.id) do  %> 
          <div class="header-name">
              <% if user_signed_in? %>
              <h1 class='user'>
@@ -32,9 +30,9 @@
             </div>           
            </div>
              <% end %>  
-           <% end %> 
+          <% end  %> 
+       　</li>
        <% end %>
-       </li>
       </ul>
     </div>
   </div>
