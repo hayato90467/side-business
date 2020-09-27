@@ -2,27 +2,40 @@
   <div class="side-bar">
     <%= render "side_bar" %>
   </div>
+
+ <div class="chat">
   <div class='comment-contents'>
      <h2 class='title'></h2>
      <%= link_to '投稿一覧', "new_item_path", class: "subtitle" %> 
 
       <ul class='item-lists'>
         <% @comments.each do |comment| %>
-          <li class='list'>
-          <%= link_to comment_path(comment.id) do  %>
-           <%# <%= image_tag comment.image.variant(resize:'500x500'), class: 'message-image' if comment.image.attached?%> %>
-             <div class='item-img-content'>
-            </div>
+        <%= link_to comment_path(comment.id) do  %> 
+        <li class='list'>
+        <%= image_tag comment.image, class: "item-image" if comment.image.attached? %>
+         <div class="header-name">
+             <% if user_signed_in? %>
+             <h1 class='user'>
+            <%= link_to current_user.name %>
+             </h1>
+             </div>
+           <%# <%= link_to comment_path(comment.id) do  %> 
+           <%# <%= image_tag comment.image.variant(resize:'500x500'), class: 'message-image' if comment.image.attached?%>  
+             <%# <div class='item-img-content'>
+            </div> %>
             <div class='comment-info'>
              <h3 class='comment-name'>
                <%= comment.business_name %>        
-            </h3>
-            <div class='item-price'>
+             </h3>
+            <div class='comment-explanation'>
              <span><%= comment.explanation %><br></span>
-            </div>
+            </div>           
            </div>
-           
-        <% end %> 
-     <% end %>
-     </div>
+             <% end %>  
+           <% end %> 
+       <% end %>
+       </li>
+      </ul>
+    </div>
+  </div>
 </div>

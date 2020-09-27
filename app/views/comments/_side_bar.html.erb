@@ -4,7 +4,7 @@
     </div>
 </div>
 
-<div class="rooms">
+ <div class="rooms">
   <div class="header-name">
     <%= link_to current_user.name , edit_user_path(current_user) %>
   </div>
@@ -13,7 +13,6 @@
    </div>
  <div class="room">
      <div class="room-name">
-      <%# <div  class=皆で投稿しよう</a> %>
       <%= link_to "新規投稿", new_comment_path, class: 'btn'%>
     </div> 
   </div>

@@ -17,9 +17,15 @@ class CommentsController < ApplicationController
     end
   end
 
-  def show
-    
+  # def update
+  #   if @comment.update(comment_params)
+  #     render :new
+  #   else
+  #     render :edit
+  #   end
+  # end
 
+  def show
   end
 
 
