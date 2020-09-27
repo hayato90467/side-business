@@ -11,16 +11,13 @@
         <% @comments.each do |comment| %>
         <li class='list'>
          <%= link_to comment_path(comment.id) do  %> 
+          <%= image_tag comment.image.variant(resize:'500x500'), class: 'message-image' if comment.image.attached?%>  
          <div class="header-name">
              <% if user_signed_in? %>
              <h1 class='user'>
             <%= link_to current_user.name %>
              </h1>
              </div>
-           <%# <%= link_to comment_path(comment.id) do  %> 
-           <%# <%= image_tag comment.image.variant(resize:'500x500'), class: 'message-image' if comment.image.attached?%>  
-             <%# <div class='item-img-content'>
-            </div> %>
             <div class='comment-info'>
              <h3 class='comment-name'>
                <%= comment.business_name %>        
@@ -31,7 +28,7 @@
            </div>
              <% end %>  
           <% end  %> 
-       　</li>
+       </li>
        <% end %>
       </ul>
     </div>

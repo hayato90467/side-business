@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 2020_09_24_014145) do
     t.integer "user_id", null: false
     t.string "business_name", null: false
     t.text "explanation", null: false
-    t.integer "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

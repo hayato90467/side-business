@@ -24,24 +24,6 @@
 
 
 
-### Association
-
-- belongs_to :user
-- has_many :messages
-
-## room_users テーブル
-
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :room
-- belongs_to :user
-
-
 アプリケーション名	
 アプリケーション概要	このアプリケーションでできることを記述しましょう。
 URL	デプロイ済みのURLを記述しましょう。デプロイが済んでいない場合は、デプロイ次第記述しましょう。
