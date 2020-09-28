@@ -59,7 +59,7 @@ gem 'rspec-rails'
 gem 'factory_bot_rails'
 gem 'faker'
 gem 'rails-i18n'
-# gem "aws-sdk-s3", require: false
+gem "aws-sdk-s3", require: false
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 group :production do
