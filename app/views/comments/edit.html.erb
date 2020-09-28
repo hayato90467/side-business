@@ -1,0 +1,45 @@
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+    <%# <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %> 
+  </header>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">副業情報入力</h2>
+    <%= form_with model: @comment, local: true do |f| %>
+
+    <%# <%= render 'shared/error_messages', model: f.object %>  
+
+     <div class="img-upload">
+      <div class="weight-bold-text">
+        出品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"image" %>
+      </div>
+    </div>
+    
+    <%# <% 副業名と副業説明 %> 
+     <div class="new-items">
+      <div class="weight-bold-text">
+        副業名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :business_name, class:"items-text", id:"name", placeholder:"副業名（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          副業の説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :explanation, class:"items-text", id:"item-info", placeholder:"副業の説明（必須 1,000文字まで" ,rows:"7" ,maxlength:"1000" %>
+      </div> 
+      <div class="sell-btn-contents">
+        <%= f.submit "変更する" ,class:"sell-btn" %>  
+      </div>
+     </div>
+    </div> 
+   </div>
+</div>
+ <% end %>
