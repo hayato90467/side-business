@@ -7,5 +7,4 @@ class Comment < ApplicationRecord
   # def was_attached?
   #   self.image.attached?
   # end
-
 end
