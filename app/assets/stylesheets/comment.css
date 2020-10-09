@@ -1,11 +1,6 @@
 .wrapper {
   display: flex;
 }
-.side-bar {
-  background-color: red;
-  width: 200px;
-  height: 100vh;
-}
 
 .header-title {
   color: #333;
@@ -16,7 +11,7 @@
 
 .side-bar-header {
   height: 100px;
-  padding: 20px;
+  padding: 30px;
   background-color: red;
   display: flex;
   justify-content: space-between;
@@ -25,6 +20,7 @@
 
 .header-name a {
   font-size: 16px;
+  margin: 30px;
   color: #FAFAFA;
   text-decoration: none;
 }
@@ -54,12 +50,21 @@
 }
 
 .room {
-  padding: 20px 0 40px;
+  padding: 20px 0 10px;
+  
 }
 
 .room-name a {
   text-decoration: none;
   color: white;
+}
+
+.search-room {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 .chat {
@@ -74,14 +79,14 @@
 }
 
 
-.item-lists {
+.comment-lists {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.item-lists>.list {
+.comment-lists>.list {
   width: 37vh;
   padding: 1vw;
   background-color: #FFF;

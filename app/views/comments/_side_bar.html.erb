@@ -1,21 +1,42 @@
 <div class="side-bar-header">
  <div class="header-title">
-      side
-    </div>
-</div>
+      <p>side</p>
+ </div>
+</div> 
 
- <div class="rooms">
-  <div class="header-name">
-    <%= link_to current_user.name , edit_user_path(current_user) %>
-  </div>
-   <div class="header-out">
+<div class="rooms">
+    <div class="room">
+      <%= link_to current_user.name , edit_user_path(current_user) %>
+    </div> 
+     <div class="room">
      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
-   </div>
- <div class="room">
+    </div>
+   <div class="room">
      <div class="room-name">
       <%= link_to "新規投稿", new_comment_path, class: 'btn'%>
     </div> 
   </div>
-  <div class="room">
+   
+   <div class="room">
+    <p>検索</p>  
+      <%= form_tag(root_path, :method => "get") do %>  
+    <p>  
+      <%= text_field_tag :search, params[:search] %>  
+      <%= submit_tag "Search", :business_name => nil %>  
+    </p>  
+     <% end %> 
+    </div> 
+    <div class="room">
+     <div class="room-name"> 
+      <% if @search_comment %> 
+      <% @search_comments.each do |comment| %>
+    <p> <%= comment.business_name %>   </p>
+     <%= comment.explanation %>  
+     <%= link_to "詳細を見る",comment_path(comment.id) %> 
+     <% end %>
+     </div>
+    </div>
+    <% end %>  
+     </div> 
   </div>
 </div>

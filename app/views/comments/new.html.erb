@@ -9,7 +9,20 @@
    
     <%# 副業と副業説明 %>
     <div class="comment-items">
+      <div class="img-upload">
       <div class="weight-bold-text">
+        出品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          働いている所の写真をお願いします
+        </p>
+        <%= f.file_field :image, id:"image" %>
+       </div> 
+       <p>　　　　　　　
+       </p>
+       <div class="weight-bold-text">
         副業紹介
         <span class="indispensable">必須</span>
       </div>
@@ -20,18 +33,7 @@
           <span class="indispensable">必須</span>
         </div>
         <%= f.text_area :explanation, class:"comment-text", id: "explanation", placeholder:"副業の説明" ,rows:"7" ,maxlength:"1000" %>
-      </div>
-      <div class="img-upload">
-      <div class="weight-bold-text">
-        出品画像
-        <span class="indispensable">必須</span>
-      </div>
-      <div class="click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= f.file_field :image, id:"image" %>
-       </div> 
+      
       <div class="sell-btn-contents">
        <%= f.submit '投稿する', class: 'form-submit' %>
        </div>

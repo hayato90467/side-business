@@ -7,6 +7,8 @@
   padding: 5vh 0;
 }
 
+:
+
 .item-box {
   background-color: #FFF;
   width: 70vw;
@@ -48,12 +50,12 @@
 }
 
 
-.item-red-btn {
+.item-btn {
   text-align: center;
-  background-color: #ea352d;
+  background-color: yellow;
   font-size: 24px;
   font-weight: bold;
-  color: #FFF;
+  color:black;
   margin: 20px 0px;
   padding: 2vh 10vw;
 }
@@ -63,7 +65,7 @@
 }
 
 .item-destroy {
-  background-color: lightgray;
+  background-color: red;
   text-align: center;
   font-size: 24px;
   color: black;

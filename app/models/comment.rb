@@ -7,4 +7,11 @@ class Comment < ApplicationRecord
   # def was_attached?
   #   self.image.attached?
   # end
+  def self.search(search)
+    if search
+      where(['business_name LIKE ?', "%#{search}%"])
+    else  
+      all  
+    end  
+  end
 end

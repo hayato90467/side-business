@@ -3,11 +3,12 @@
     <%= render "side_bar" %>
   </div>
 
+
  <div class="chat">
   <div class='comment-contents'>
      <h2 class='title'>投稿一覧</h2> 
 
-      <ul class='item-lists'>
+      <ul class='comment-lists'>
         <% @comments.each do |comment| %>
         <li class='list'>
          <%= link_to comment_path(comment.id) do  %> 

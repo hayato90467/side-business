@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
 
   def index
     @comments = Comment.order('created_at DESC')
+    @searh_comment = Comment.all.search(params[:search])
   end
 
   def new

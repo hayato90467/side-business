@@ -1,11 +1,9 @@
-/* 商品一覧 */
 
 .comment-contents {
   background-color: #FFF;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10vh 0;
 }
 
 .item-contents>.title {
